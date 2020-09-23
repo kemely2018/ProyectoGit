@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es" xml:lang="es">
+<head>
+	<meta http-equiv="Content-Type" content="text/html"; charset="UTF-8"/>
+	<title>Nuevo Cliente</title>
+	<script type="text/javascript">
+		function regi_empl(){
+			var dni = document.getElementById('txt_dni').value;
+			var nomb = document.getElementById('txt_nomb').value;
+			var sexo = document.getElementById('txt_sexo').value;
+			var gen = document.getElementById('txt_gen').value;
+			var calle = document.getElementById('txt_calle').value;
+			var num = document.getElementById('txt_num').value;
+			var compl = document.getElementById('txt_compl').value;
+			var ciu = document.getElementById('txt_ciu').value;
+			var depar = document.getElementById('txt_depar').value;
+			if(dni =='' || nomb =='' || sexo == '' || gen == '' || calle =='' || num == ''
+				||compl == '' || ciu == '' || depar == ''){
+				alert('Faltan completar campos');
+				return;
+			}
+			var xhr;
+			if (window.XMLHttpRequest) {
+				xhr = new XMLHttpRequest(); 
+			}else if(window.ActiveXObject){
+				xhr = new ActiveXObject("Microsoft.XMLHTTP");
+			}
+
+			var data = "";
+			data = data + "dni="+dni + "&";
+			data = data + "nomb="+nomb + "&";
+			data = data + "sexo="+sexo + "&";
+			data = data + "gen="+gen + "&";
+			data = data + "calle="+calle + "&";
+			data = data + "num="+num + "&";
+			data = data + "compl="+compl+ "&" ;
+			data = data + "ciu="+ciu + "&";
+			data = data + "depar="+depar;
+
+			xhr.open("POST","registrar_cliente.php",true);
+			xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+			xhr.send(data);
+
+			xhr.onreadystatechange = display_data;
+			function display_data(){
+				if (xhr.readyState == 4) {
+					if (xhr.status == 200) {
+						alert(xhr.responseText);
+					}else{
+						alert('A ocurrido un problema !');
+					}
+				}
+			}
+		}
+	</script>
+</head>
+
+<body>
+	<h1>Nuevo Cliente Banco</h1>
+	<table>
+		<tr>
+			<td><label>DNI:</label></td>
+			<td><input type="text" id="txt_dni"/></td>
+		</tr>
+		<tr>
+			<td><label>Nombre:</label></td>
+			<td><input type="text" id="txt_nomb"/></td>
+		</tr>
+		<tr>
+			<td><label>Sexo:</label></td>
+			<td><input type="text" id="txt_sexo"/></td>
+		</tr>
+		<tr>
+			<td><label>Genero:</label></td>
+			<td><input type="text" id="txt_gen"/></td>
+		</tr>
+		<tr>
+			<td><label>Calle:</label></td>
+			<td><input type="text" id="txt_calle"/></td>
+		</tr>
+		<tr>
+			<td><label>Numero:</label></td>
+			<td><input type="text" id="txt_num"/></td>
+        </tr>
+        <tr>
+			<td><label>Complemento:</label></td>
+			<td><input type="text" id="txt_compl"/></td>
+		</tr>
+		<tr>
+			<td><label>Ciudad:</label></td>
+			<td><input type="text" id="txt_ciu"/></td>
+		</tr>
+		<tr>
+			<td><label>Departamento:</label></td>
+			<td><input type="text" id="txt_depar"/></td>
+		</tr>
+	</table>
+	<br />
+	<br />
+	<button type="submit" id="btn_registrar" onclick="regi_empl()">Registrar</button>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
