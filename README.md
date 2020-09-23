@@ -5,7 +5,7 @@ Configurar y usar Git como sistema de control de versiones de un proyecto person
    Nos situamos en la carpeta en la que queremos trabajar. Nos aseguramos con pwd, para saber dónde estamos.
    Ahora con git init inicializa el repositorio:
    <p align="center">
-      <img width="50%" height="50%" src="data_readme/init.png">
+      <img width="50%" height="50%" src="Imagenes/init.PNG">
    </p>
    
 ## b)	Configurar y usar GitHub
