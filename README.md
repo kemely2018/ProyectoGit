@@ -105,7 +105,7 @@ Configurar y usar Git como sistema de control de versiones de un proyecto person
      <p>
         <img width="40%" height="40%" src="Imagenes/github6.PNG">
      </p>  
-   ### Tipo 2: Trabaje en su proyecto localmente, luego cree el repositorio en GitHub y envíelo a control remoto.
+   ### Tipo 2: Trabaje en su proyecto localmente, luego cree el repositorio en GitHub y envíelo a remote control .
    El tipo 2 le permite crear un repositorio nuevo desde una carpeta existente en nuestra computadora y enviarlo a GitHub. En muchos casos, es posible que ya haya creado algo en su computadora que desee convertir repentinamente en un repositorio en GitHub.<br />
    Por defecto, cualquier directorio de nuestra computadora no es un repositorio de Git, pero podemos convertirlo en un repositorio de Git.<br />
    Después de convertir nuestro directorio a un repositorio de Git, lo primero que debemos hacer es verificar los archivos que tenemos.<br />
